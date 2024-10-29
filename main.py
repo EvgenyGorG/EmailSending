@@ -6,14 +6,14 @@ email_to = "jekagorohovdiablo@mail.ru"
 login = os.getenv('MAIL_RU_LOGIN')
 password = os.getenv('MAIL_RU_PASSWORD')
 
-letter = '''\
-From: 9djon9@mail.ru
-To: jekagorohovdiablo@mail.ru
+letter = f'''\
+From: {email_from}
+To: {email_to}
 Subject: Приглашение!
-Content-Type: text/plain; charset="UTF-8";
+Content-Type: text/plain; charset="UTF-8";\n\n
 '''
 
-message = ('''\
+message = '''\
 Привет, %friend_name%! %my_name% приглашает тебя на сайт %website%!
 
 %website% — это новая версия онлайн-курса по программированию. 
@@ -30,7 +30,7 @@ message = ('''\
 
 Регистрируйся → %website%  
 На курсы, которые еще не вышли, можно подписаться и получить уведомление о релизе сразу на имейл.
-''')
+'''
 
 friend_name = 'Иван'
 website_name = 'https://dvmn.org/referrals/zLsUAtGw6wsPLGyqi79GQQ260wfNrti2NFrDR5Jz/'
